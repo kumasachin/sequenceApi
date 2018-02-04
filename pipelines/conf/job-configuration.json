@@ -1,0 +1,66 @@
+{
+  "journey": "aoo-cwa-init",
+  "packaging": {
+    "npm_options": ""
+  },
+  "nexus": {
+    "url": "http://nexus.sandbox.extranet.group/nexus/content/repositories/npm-internal/",
+    "publish_auth": "npm-publisher"
+  },
+  "git": {
+    "creds_id": "83e374e2-2bb6-4479-9d16-5c73169a1109"
+  },
+  "sonar": {
+    "exclusions": "**/pipelines/**,Jenkinsfile,dist/**,demo/**,node_modules/**,central-scripts/**,coverage/**,.vscode/**,index.js,webpack.config.demo.js, webpack.config.js, **/test.js, src/dispatcher/**, **/index.js, src/utils/**, src/components/PFScreen/**,src/mockdata/**, src/constants/**, src/stores/**, src/actions/**",
+    "coverage_exclusions": "**/pipelines/**,Jenkinsfile,dist/**,demo/**,node_modules/**,central-scripts/**,coverage/**,.vscode/**,index.js,webpack.config.demo.js, webpack.config.js, **/test.js, src/dispatcher/**, **/index.js, src/utils/**, src/components/PFScreen/**,src/mockdata/**, src/constants/**, src/stores/**, src/actions/**",
+    "quality_gate": "OB-AISP-API-QG",
+    "server_id": "SONAR-main"
+  },
+  "splunk": {
+    "reportdir": "/apps/splunkreports/aoo-cwa-web-bdd",
+    "differentdir": "Cant see a structure",
+    "host": "10.113.140.187"
+  },
+  "bdd": {
+    "invocation": " gulp wdio-cwa-sanity",
+    "git_repo": "http://gerrit.sandbox.extranet.group/aoo-cwa-init",
+    "git_default_branch": "master"
+  },
+  "sauce": {
+    "credentials": {
+      "daily": "SAUCELABS_PCA_DAY"
+    }
+  },
+  "defaults": {
+    "tag": "B92"
+  },
+  "bluemix": {
+    "domain": "lbg.eu-gb.bluemix.net",
+    "api": "api.lbg.eu-gb.bluemix.net",
+    "credentials": "bluemix-global-deployer"
+  },
+  "passthresholds": {
+    "bdd": {
+      "percent_scenarios": "90"
+    }
+  },
+  "environments": {
+    "release": {
+      "disk": "512M",
+      "memory": "512M",
+      "bluemix": {
+        "org": "POC47_PSD2AISP",
+        "env": "Test"
+      }
+    },
+    "master": {
+      "disk": "512M",
+      "memory": "512M",
+      "bluemix": {
+        "org": "POC47_PSD2AISP",
+        "env": "DEV"
+      }
+    }
+  },
+  "tag": "beta"
+}

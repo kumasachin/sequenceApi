@@ -1,0 +1,14 @@
+font_name: icon
+no_hash: true
+templates: [ scss, preview ]
+css_selector: .icon-{{glyph}}
+preprocessor_path: ../fonts
+input:
+  vectors: src/assets/icons
+output:
+  fonts: src/assets/fonts
+  css: src/assets/styles
+  preview: src/assets/icons
+#  preprocessor_path: ../fonts
+#  preprocessor_path: /assets/fonts
+#  font_face_path: /assets/fonts
